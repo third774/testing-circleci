@@ -2,6 +2,7 @@
   "name": "testing-circleci",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://kkipp-testing-circleci.s3-website.us-east-2.amazonaws.com/",
   "dependencies": {
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
