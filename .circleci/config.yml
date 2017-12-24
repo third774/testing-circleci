@@ -7,7 +7,7 @@ jobs:
     steps:
       - run:
           name: install deps and build
-          command: npm i && npm run build
+          command: echo $PWD && npm i && npm run build
 
   deploy-job:
     docker:
