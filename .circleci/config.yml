@@ -27,5 +27,7 @@ workflows:
           requires:
             - build-job
           filters:
+            tags:
+              only: /^v.*$/
             branches:
               only: master
