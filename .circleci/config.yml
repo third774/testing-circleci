@@ -6,8 +6,8 @@ jobs:
     working_directory: /home/circleci/repo
     steps:
       - run:
-        name: install deps and build
-        command: npm i && npm run build
+          name: install deps and build
+          command: npm i && npm run build
 
   deploy-job:
     docker:
