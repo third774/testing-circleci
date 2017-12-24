@@ -5,18 +5,20 @@ jobs:
       - image: third774/testing-circleci:latest
     working_directory: /home/circleci/repo
     steps:
+      - checkout
       - run:
           name: install deps and build
-          command: git clone https://github.com/third774/testing-circleci.git . && npm i && npm run build
+          command: npm i && npm run build
 
   deploy-job:
     docker:
       - image: third774/testing-circleci:latest
     working_directory: /home/circleci/repo
     steps:
+      - checkout
       - run:
           name: Deploy to S3 if tests pass and branch is Master
-          command: git clone https://github.com/third774/testing-circleci.git . && npm i && npm run build && aws s3 cp /home/circleci/repo/build s3://kkipp-testing-circleci --recursive --include "*" --acl public-read
+          command: npm i && npm run build && aws s3 cp /home/circleci/repo/build s3://kkipp-testing-circleci --recursive --include "*" --acl public-read
 
 workflows:
   version: 2
