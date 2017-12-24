@@ -1,4 +1,6 @@
-build-job:
+version: 2
+jobs:
+  build-job:
     docker:
       - image: circleci/node:8
     working_directory: /home/circleci/repo
@@ -7,7 +9,7 @@ build-job:
         name: install deps and build
         command: npm i && npm run build
 
-deploy-job:
+  deploy-job:
     docker:
       - image: circleci/node:8
     working_directory: /home/circleci/repo
