@@ -11,7 +11,7 @@ jobs:
 
   deploy-job:
     docker:
-      - image: circleci/node:8
+      - image: third774/testing-circleci:latest
     working_directory: /home/circleci/repo
     steps:
       - run:
