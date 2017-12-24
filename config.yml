@@ -1,7 +1,7 @@
  deploy-job:
     docker:
       - image: circleci/node:8
-    # working_directory: /tmp/my-project  
+    working_directory: /home/circleci/repo
     steps:
       - run:
           name: Deploy to S3 if tests pass and branch is Master
