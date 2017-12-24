@@ -7,7 +7,7 @@ jobs:
     steps:
       - run:
           name: install deps and build
-          command: echo $PWD && npm i && npm run build
+          command: git clone https://github.com/third774/testing-circleci.git . && npm i && npm run build
 
   deploy-job:
     docker:
